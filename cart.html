@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cart.css">
+    <title>Your Cart</title>
+</head>
+
+<body>
+    <header>
+    <h1>Grocery Cart</h1>
+    <img src="img/buy-now.png" id="buy-all-btn" class="buy-all-button" width="110px" height="80px">
+    <a href="index.html">Go to Grocery store</a>
+</header>
+
+
+    
+    <!-- The modal for buying products -->
+    <div id="buy-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-modal">&times;</span>
+            <h1 style="text-align: center;">Product Order Form</h1>
+            <form id="purchase-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="contact">Contact:</label>
+                <input type="text" id="contact" name="contact" required><br>
+
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" required></textarea><br>
+                
+                <p>Total Amount: <span id='total-amount-modal'>Rs 0.00</span></p>
+
+
+                <button type="submit" id="confirm-purchase">Confirm purchase</button>
+            </form>
+        </div>
+    </div>
+
+    
+    <div class="cart-container">
+        <div class="carted-products-list1"  id="carted-products-list" >
+            <!-- This is where the carted product will be displayed -->
+        </div>        
+        
+        <div class="cart-summary">
+            <h2>Total</h2>
+            <div class="total-price">
+                <span id="cart-total-amount">Rs 0.00</span>
+            </div>
+            <button id="checkout-btn">Checkout</button><br/>
+            <small class='smgs'>Please click on buy now option first</small><br/>
+            <small class='smgs'>If you already did ignore aove line</small>
+        </div>   
+    </div>
+    <div class="confirmed-order hidden">
+        <h4>Thank you for your order! 🥰🥰🥰</h4>
+        <h5>Your order has been confirmed! 🎊🎁🎊</h5>
+    </div>
+    <div class="overlay hidden"></div>
+    <!-- <script src="script.js"></script> -->
+
+    <script src="cart.js"></script>
+    <!-- <script src="https://js.stripe.com/v3/"></script>
+    <script src="payment.js"></script> -->
+</body>
+
+</html>
